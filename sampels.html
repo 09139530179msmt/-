@@ -1,0 +1,114 @@
+<nav>
+  <ul>
+    <li><a href="index.html">صفحه اصلی</a></li>
+   
+       <li><a href="downloads.html"> طرح های لایه باز</a></li>
+    <li><a href="articels.html">مقالات</a></li>
+      <li><a href="about.html">درباره ما</a></li>
+    
+  </ul>
+</nav>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نمونه‌کارها - طراحی حاتمی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- همان منو بالا تکرار شود مثل index.html -->
+  </header>
+  <main>
+    <section id="religious">
+      <h2>نمونه‌کارهای مذهبی</h2>
+      <div class="gallery">
+        <!-- <a href="لینک"><img src="لینک کوچک" alt=""></a> -->
+      </div>
+
+
+
+<div class="gallery">
+  <img src="https://uploadkon.ir/uploads/f25c02_25پوستر-مسجد-مهدیه-با-بکگراند-شب.jpg" alt="نمونه ۱">
+  <img src="https://uploadkon.ir/uploads/0aa402_25ش.jpg" alt="نمونه ۲">
+  <img src="https://uploadkon.ir/uploads/801b02_25پوستر-اول-مسجد-مهدیه.jpg" alt="نمونه ۳">
+<img src="https://uploadkon.ir/uploads/105802_25پوستر-مسجد-مهدیه-قبلی-اصلی2.jpg" alt="نمونه 4">
+<img src="https://uploadkon.ir/uploads/efc802_25ی.jpg" alt="نمونه 5">
+<img src="https://uploadkon.ir/uploads/539602_25-.jpg" alt="نمونه 6">
+
+
+</div>
+
+
+
+</section>
+
+
+
+    <section id="advertising">
+      <h2>نمونه‌کارهای تبلیغاتی</h2>
+      <div class="gallery">
+        <!-- مانند بالا -->
+      </div>
+<div class="gallery">
+  <img src="https://i.postimg.cc/Z5kSVFHZ/image.jpg" alt="نمونه ۱">
+  <img src="https://i.postimg.cc/BngJbP50/111.jpg" alt="نمونه ۲">
+  <img src="https://i.postimg.cc/MHkCdz05/moon-copy.jpg" alt="نمونه ۳">
+<img src="https://i.postimg.cc/zXWDFqMP/copy2222222.jpg" alt="نمونه 4">
+<img src="https://i.postimg.cc/mDFKWg7v/copy.jpg" alt="نمونه 5">
+<img src="https://i.postimg.cc/BnT64JB1/image.jpg" alt="نمونه 6">
+
+
+</div>
+
+
+
+
+
+
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%;
+height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightboxImg" src="" style="max-width:80%; max-height:80%; border-radius:10px;">
+</div>
+
+
+
+
+
+
+</section>
+  </main>
+  <footer>نمونه‌کارها © اکادمی طراحی حاتمی</footer>
+</body>
+
+
+
+<script>
+  const galleryImgs = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      if (img.src) {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      }
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+
+
+
+
+</html>

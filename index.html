@@ -1,0 +1,90 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+<script src="js/form.js"></script>
+
+  <meta charset="UTF-8">
+  <title>خانه - طراحی حاتمی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">صفحه ی اصلی</a></li>
+        <li>
+          <a href="sampels.html">نمونه‌کارها</a>
+          <ul>
+            <li><a href="sampels.html#religious">مذهبی</a></li>
+            <li><a href="sampels.html#advertising">تبلیغاتی</a></li>
+          </ul>
+        </li>
+        <li><a href="downloads.html"> طرح های لایه باز</a></li>
+        <li><a href="articels.html">مقالات</a></li>
+             <li><a href="about.html">درباره ما</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+
+
+
+<section class="form-section">
+  <h2>📝 سفارش طراحی پوستر</h2>
+  <form onsubmit="submitForm(); return false;">
+    <div class="form-group">
+      <input type="text" id="name" required />
+      <label for="name">نام شما</label>
+    </div>
+    <div class="form-group">
+      <select id="type" required>
+        <option value="" disabled selected></option>
+        <option value="مذهبی">مذهبی</option>
+        <option value="تبلیغاتی">تبلیغاتی</option>
+      </select>
+      <label for="type">نوع پوستر</label>
+    </div>
+    <div class="form-group">
+      <textarea id="desc" rows="4" required></textarea>
+      <label for="desc">توضیحات تکمیلی</label>
+    </div>
+    <button type="submit">ثبت سفارش</button>
+  </form>
+  <p id="msg" class="success-message"></p>
+
+
+
+<script>
+function submitForm() {
+  const msg = document.getElementById("msg");
+  msg.innerText = "سفارش ثبت شد . برای تایید سفارش خود در ایتا به شماره «09139530179» پیام دهید.";
+  msg.style.opacity = 1;
+}
+</script>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+     
+  </main>
+  <footer>تمام حقوق محفوظ است © آکادمی طراحی حاتمی</footer>
+</body>
+</html>
