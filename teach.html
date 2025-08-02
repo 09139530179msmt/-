@@ -1,0 +1,179 @@
+<nav>
+  <ul>
+    <li><a href="index.html">صفحه اصلی</a></li>
+   <li><a href="sampels.html">نمونه کار ها</a></li>
+       <li><a href="downloads.html"> طرح های لایه باز</a></li>
+    <li><a href="articels.html">مقالات</a></li>
+      <li><a href="about.html">درباره ما</a></li>
+    
+
+  </ul>
+</nav>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نمونه‌کارها - طراحی حاتمی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- همان منو بالا تکرار شود مثل index.html -->
+  </header>
+  <main>
+    <section id="religious">
+      <h2>تایم لپس ها </h2>
+      <div class="gallery">
+        <!-- <a href="لینک"><img src="لینک کوچک" alt=""></a> -->
+      </div>
+
+
+<style>
+.video-box {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.video-box:hover {
+  transform: scale(1.05);
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-box:hover .video-caption {
+  opacity: 1;
+}
+</style>
+
+<div class="video-box">
+  <video controls poster="پوستر-ویدیو.jpg">
+    <source src="https://uploadkon.ir/uploads/593202_25InShot-۲۰۲۵۰۸۰۱-۱۰۴۴۲۲۱۴۶.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+  <div class="video-caption">تایم لپس طراحی پوستر -طراحی پوستر سانیچ</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+<section>
+  <h2>اموزش های رایگان</h2>
+  <div class="downloads">
+    
+      
+      <p>به‌زودی مجموعه‌ای ازاموزش های رایگان  در این قسمت قرار داده خواهد شد.
+      شما می‌توانید آن‌ها را به طور کاملا مشاهده  کنید.</p>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section>
+  <h2>اموزش های پیشرفته </h2>
+  <div class="downloads">
+    
+      
+      <p>به‌زودی مجموعه‌ای از اموزش های فوق پیشرفته  در این قسمت قرار داده خواهد شد.
+      شما می‌توانید آن‌ها را مشاهده و خریداری کنید.</p>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%;
+height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img id="lightboxImg" src="" style="max-width:80%; max-height:80%; border-radius:10px;">
+</div>
+
+
+
+
+
+
+</section>
+  </main>
+  <footer>نمونه‌کارها © اکادمی طراحی حاتمی</footer>
+</body>
+
+
+
+<script>
+  const galleryImgs = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      if (img.src) {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      }
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+
+
+
+
+</html>
