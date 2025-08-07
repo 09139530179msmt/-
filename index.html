@@ -22,14 +22,23 @@
   <header>
     <nav>
       <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <li><a href="index.html">صفحه ی اصلی</a></li>
         <li>
           <a href="sampels.html">نمونه‌کارها</a>
-          <ul>
-            <li><a href="sampels.html#religious">مذهبی</a></li>
-            <li><a href="sampels.html#advertising">تبلیغاتی</a></li>
-          </ul>
-        </li>
+                  </li>
         <li><a href="downloads.html"> طرح های لایه باز</a></li>
         <li><a href="teach.html"> اموزش ها</a></li>
             <li><a href="articels.html">مقالات</a></li>
@@ -39,6 +48,26 @@
     </nav>
   </header>
   <main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,9 +111,38 @@ function submitForm() {
 </section>
 
 
+<script>
 
 
 
+
+
+
+
+
+
+
+
+function toggleSearchBox() {
+  const box = document.getElementById("search-box");
+  box.style.display = box.style.display === "flex" ? "none" : "flex";
+}
+
+function performSearch() {
+  const query = document.getElementById("search-input").value;
+  alert("در حال جست‌وجوی: " + query);
+  // اینجا می‌تونی به صفحه نتایج هدایت کنی یا جست‌وجو رو انجام بدی
+}
+
+
+
+
+
+
+
+
+
+</script>
 
 
 

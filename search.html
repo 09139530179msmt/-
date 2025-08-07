@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نتایج جست‌وجو</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h2>🔍 نتایج جست‌وجو</h2>
+    <div id="results"></div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q");
+
+    const data = [
+      { title: "آموزش طراحی پوستر", url: "teach.html" },
+      { title: "نمونه‌کارهای مذهبی", url: "sampels.html" },
+      { title: "مقاله درباره تایپوگرافی", url: "articels.html" },
+      { title: "طرح‌های تبلیغاتی", url: "downloads.html" }
+    ];
+
+    const results = data.filter(item => item.title.includes(query));
+    const container = document.getElementById("results");
+
+    if (results.length > 0) {
+      results.forEach(item => {
+        const link = document.createElement("a");
+        link.href = item.url;
+        link.innerText = item.title;
+        link.style.display = "block";
+        container.appendChild(link);
+      });
+    } else {
+      container.innerText = "نتیجه‌ای یافت نشد.";
+    }
+  </script>
+</body>
+</html>
